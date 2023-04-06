@@ -1,0 +1,13 @@
+{
+    "name": "drifblim",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools"
+            ]
+        }
+    }
+}
