@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "name": "drifblim",
+            "path": ".",
+        },
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.default.cStandard": "gnu23",
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cpptools",
+        ],
+    },
+}
