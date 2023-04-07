@@ -12,6 +12,7 @@ int main(void)
 
     sigemptyset(&ss);
     sigaddset(&ss, SIGCHLD);
+    sigaddset(&ss, SIGTERM);
 
     sigprocmask(SIG_BLOCK, &ss, NULL);
 
@@ -21,6 +22,11 @@ int main(void)
         if (ret != 0)
         {
             exit(EXIT_FAILURE);
+        }
+
+        if (signo == SIGTERM)
+        {
+            exit(EXIT_SUCCESS);
         }
 
         if (signo == SIGCHLD)
