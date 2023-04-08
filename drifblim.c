@@ -33,8 +33,8 @@ int main(void)
         {
             while (true)
             {
-                wait(NULL);
-                if (errno == ECHILD)
+                ret = waitpid(-1, NULL, WNOHANG);
+                if (ret == 0 || errno == ECHILD)
                 {
                     break;
                 }
